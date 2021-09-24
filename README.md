@@ -1,0 +1,1 @@
+# Keycloak plugin for webhook validation in user registration
