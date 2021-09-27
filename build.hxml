@@ -5,7 +5,6 @@
 com.beeinventor.keycloak.WebhookFormAction
 com.beeinventor.keycloak.WebhookFormActionFactory
 
---library tink_adhoc
 --java-lib-extern extern/javax-crypto.jar
 
 maven.hxml
