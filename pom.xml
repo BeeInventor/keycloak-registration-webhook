@@ -5,16 +5,16 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<group.id>com.beeinventor</group.id>
-		<artifact.id>keycloak-webhook-authenticator</artifact.id>
+		<artifact.id>keycloak-registration-webhook</artifact.id>
 		<github.global.server>github</github.global.server>
 	</properties>
 
 	<groupId>com.beeinventor</groupId>
-	<artifactId>keycloak-webhook-authenticator</artifactId>
+	<artifactId>keycloak-registration-webhook</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
 	<scm>
-		<url>https://github.com/BeeInventor/keycloak-webhook-authenticator</url>
+		<url>https://github.com/BeeInventor/keycloak-registration-webhook</url>
 	</scm>
 
 	<repositories>
@@ -56,12 +56,6 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.keycloak</groupId>
-			<artifactId>keycloak-services</artifactId>
-			<version>15.0.2</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
 			<groupId>javax.ws.rs</groupId>
 			<artifactId>javax.ws.rs-api</artifactId>
 			<version>2.1.1</version>
@@ -79,23 +73,7 @@
 			<version>4.7.1.Final</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.amazonaws</groupId>
-			<artifactId>aws-java-sdk-cognitoidp</artifactId>
-		</dependency>
 	</dependencies>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.amazonaws</groupId>
-				<artifactId>aws-java-sdk-bom</artifactId>
-				<version>1.12.57</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 
 	<build>
 		<resources>
@@ -158,7 +136,7 @@
 					</includes>
 					<merge>true</merge>
 					<repositoryOwner>BeeInventor</repositoryOwner>
-					<repositoryName>keycloak-webhook-authenticator</repositoryName>
+					<repositoryName>keycloak-registration-webhook</repositoryName>
 				</configuration>
 				<executions>
 					<execution>
