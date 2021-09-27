@@ -83,7 +83,7 @@ class WebhookFormAction implements FormAction {
 		}
 	}
 	
-	function invokeWebhook(url:String, method:String, payload:Dynamic, ?auth:String) {
+	function invokeWebhook(url:String, method:String, payload:Any, ?auth:String) {
 		final url = new URL(url);
 		final cnx:HttpURLConnection = cast url.openConnection();
 		final data = Bytes.ofString(Json.stringify(payload));
