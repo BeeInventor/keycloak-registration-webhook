@@ -56,13 +56,12 @@ class WebhookFormAction implements FormAction {
 		try {
 			final result = invokeWebhook(url, 'POST', payload, auth);
 			final code = result.status;
+			trace('Webhook returned code: $code, body: ${result.body.toString()}');
 			
 			if(code >= 200 && code < 300) {
 				trace('success()');
 				ctx.success();
-			}
-			else {
-				trace('Webhook returned code: $code');
+			} else {
 				ctx.error(Errors.INVALID_REGISTRATION);
 				final message = switch try haxe.Json.parse(result.body.toString()).message catch(_) null {
 					case null: config.get(WebhookFormActionFactory.ERROR_MESSAGE);
