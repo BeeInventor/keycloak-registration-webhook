@@ -9,7 +9,7 @@
 	<groupId>com.beeinventor</groupId>
 	<artifactId>keycloak-registration-webhook</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<scm>
 		<url>https://github.com/BeeInventor/keycloak-registration-webhook</url>
 	</scm>
